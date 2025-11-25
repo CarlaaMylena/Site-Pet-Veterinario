@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Planvet - Convênio Animal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+                <span>PetShop Planvet</span>
+            </div>
+            
+            <nav class="navbar" id="navbar">
+                <a href="#home" class="active">HOME</a>
+                <a href="#quem-somos">QUEM SOMOS</a>
+                <a href="#grupo-adocao">GRUPO ADOÇÃO</a>
+                <a href="#servicos">SERVIÇOS</a>
+                <a href="#agendamento">AGENDAMENTO</a>
+                <a href="#contato">CONTATO</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-left">
+                <h1>Sua clínica veterinária</h1>
+                <h2>24 horas em João Pessoa</h2>
+                <p>Cuidamos do seu pet com carinho e profissionalismo. Convênio animal com os melhores serviços veterinários de João Pessoa e Recife.</p>
+                <button class="btn-login" onclick="showLoginModal()">LOGIN</button>
+                
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5583988870101" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img src="images/dog-hero.png" alt="Cachorro" class="hero-dog">
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="quem-somos">
+        <div class="container">
+            <h2 class="section-title">Quem <span>Somos</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>A <strong>Planvet Saúde</strong> é uma empresa especializada em convênios para animais de estimação, oferecendo os melhores serviços veterinários em João Pessoa e Recife.</p>
+                    <p>Com uma rede credenciada de clínicas e profissionais qualificados, garantimos o bem-estar do seu pet com planos acessíveis e atendimento de qualidade.</p>
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Rede credenciada ampla</li>
+                        <li><i class="fas fa-check-circle"></i> Planos acessíveis</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento 24h</li>
+                        <li><i class="fas fa-check-circle"></i> Profissionais qualificados</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/veterinario-pet.jpg" alt="Veterinário com pet">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="adoption-section" id="grupo-adocao">
+        <div class="container">
+            <h2 class="section-title">Grupo de <span>Adoção</span></h2>
+            <p class="section-subtitle">Conheça nossos pets disponíveis para adoção responsável</p>
+            
+            <div class="adoption-grid" id="adoptionGrid"></div>
+            
+            <div class="adoption-cta">
+                <h3>Quer adotar um pet?</h3>
+                <p>Entre em contato conosco e saiba como fazer parte dessa família!</p>
+                <button class="btn-shop" onclick="scrollToSection('contato')">FALE CONOSCO</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="find-section">
+        <div class="container find-content">
+            <div class="find-left">
+                <div class="circle-text">
+                    <img src="images/dog-yellow.jpg" alt="Dog" class="circle-dog">
+                    <svg viewBox="0 0 200 200" class="circular-text">
+                        <path id="curve" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" fill="transparent"/>
+                        <text>
+                            <textPath href="#curve">
+                                Cuidamos do seu pet com amor e dedicação profissional sempre
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="find-right">
+                <h2>ENCONTRE TUDO<br>QUE SEU PET PRECISA</h2>
+                <p>Oferecemos uma gama completa de serviços veterinários, desde consultas de rotina até procedimentos especializados. Nosso convênio garante acesso facilitado aos melhores profissionais.</p>
+                <div class="find-buttons">
+                    <button class="btn-shop" onclick="scrollToSection('servicos')">VER SERVIÇOS</button>
+                    <button class="btn-pricing" onclick="scrollToSection('contato')">PLANOS E PREÇOS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Veja abaixo nossos <span>serviços e produtos!</span></h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/convenio1.jpg" alt="Convênio Animal">
+                    <div class="service-overlay">
+                        <h3>CONVÊNIO ANIMAL</h3>
+                        <p>Planos completos para seu pet</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="images/convenio2.jpg" alt="Convênio Animal em João Pessoa">
+                    <div class="service-overlay">
+                        <h3>CONVÊNIO ANIMAL EM JOÃO PESSOA</h3>
+                        <p>Rede credenciada na capital paraibana</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="images/convenio3.jpg" alt="Convênio Animal em Recife">
+                    <div class="service-overlay">
+                        <h3>CONVÊNIO ANIMAL EM RECIFE</h3>
+                        <p>Atendimento veterinário em Pernambuco</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="images/convenio4.jpg" alt="Convênio para Animais de Estimação">
+                    <div class="service-overlay">
+                        <h3>CONVÊNIO PARA ANIMAIS DE ESTIMAÇÃO</h3>
+                        <p>Cuidado completo para seu melhor amigo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="appointment-section" id="agendamento">
+        <div class="container">
+            <h2 class="section-title">Agende uma <span>Consulta</span></h2>
+            
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="petName">Nome do Pet</label>
+                        <input type="text" id="petName" name="petName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ownerName">Nome do Tutor</label>
+                        <input type="text" id="ownerName" name="ownerName" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="service">Serviço</label>
+                        <select id="service" name="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="consulta">Consulta Veterinária</option>
+                            <option value="vacina">Vacinação</option>
+                            <option value="banho">Banho e Tosa</option>
+                            <option value="cirurgia">Cirurgia</option>
+                            <option value="emergencia">Emergência</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Data Preferencial</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Observações</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn-shop">AGENDAR CONSULTA</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em <span>Contato</span></h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua Cunha Bocaiuva, 625 - Sl 06<br>Centro - João Pessoa/PB</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(83) 98887-0101</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>administracao@planvetsaude.com.br</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta: 08:00h às 18:00h</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Seu Telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-shop">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">E-mail</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Senha</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-login">ENTRAR</button>
+                <p class="modal-footer">Não tem conta? <a href="#" onclick="showRegisterModal()">Cadastre-se</a></p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">
+                    <i class="fas fa-plus"></i>
+                    <span>Planvet Saúde</span>
+                </div>
+                <p class="footer-desc">Convênio animal com os melhores serviços veterinários.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>ENDEREÇO</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Rua Cunha Bocaiuva, 625 - Sl 06<br>Centro - João Pessoa/PB</p>
+                
+                <h3>HORÁRIO DE ATENDIMENTO</h3>
+                <p>Segunda a Sexta: 08:00h às 18:00h</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>PLANVET SAÚDE</h3>
+                <p><i class="fab fa-whatsapp"></i> (83) 98887-0101</p>
+                <p><i class="fas fa-envelope"></i> administracao@planvetsaude.com.br</p>
+                
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#quem-somos">QUEM SOMOS</a></li>
+                    <li><a href="#grupo-adocao">GRUPO ADOÇÃO</a></li>
+                    <li><a href="#servicos">SERVIÇOS</a></li>
+                    <li><a href="#agendamento">AGENDAMENTO</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Planvet Saúde - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
